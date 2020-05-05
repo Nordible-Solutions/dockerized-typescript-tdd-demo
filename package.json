@@ -5,13 +5,22 @@
   "main": "dist/app.js",
   "scripts": {
     "start": "tsc && node dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "coverage":"jest --coverage"
+  },
+  "directories": {
+    "test": "test"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.13.4",
+    "chai": "^4.2.0",
+    "jest": "^26.0.1",
+    "ts-jest": "^25.4.0",
     "tslint": "^5.12.1",
-    "typescript": "^3.3.3"
+    "typescript": "^3.8.3"
   },
   "dependencies": {
     "express": "^4.16.4"

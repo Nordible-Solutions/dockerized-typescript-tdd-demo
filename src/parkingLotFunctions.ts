@@ -19,10 +19,10 @@ export const create_parking_lot = async (howManyLots) => {
 }
 
 let park = async (vehicleNumber) => {
-    if (lotSize === vehiclesToPark.length) {
-        return `No space for more vehicles`;
-    } else if (lotSize === 0) {
+    if (lotSize === 0) {
         return `Error, please initate parking lot`;
+    } else if (lotSize === vehiclesToPark.length) {
+        return `No space for more vehicles`;
     } else {
         let parkingSlot = availableParkingSlots[0];
         vehiclesToPark.push({

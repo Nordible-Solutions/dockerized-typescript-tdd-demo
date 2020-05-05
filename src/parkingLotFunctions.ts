@@ -18,8 +18,10 @@ export const create_parking_lot = async (howManyLots) => {
     return `Created parking lot with ${lotSize} slots`;
 }
 
-let park = async (vehicleNumber) => {
-    if (lotSize === 0) {
+export const park = async (vehicleNumber) => {
+    if (!vehicleNumber) {
+        return `Error, vehicle registration number is needed`;
+    } else if (lotSize === 0) {
         return `Error, please initate parking lot`;
     } else if (lotSize === vehiclesToPark.length) {
         return `No space for more vehicles`;

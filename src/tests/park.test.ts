@@ -22,7 +22,7 @@ describe('park function tests', () => {
     });
     
     it('should test threshold of the parking lot', async () => {
-        let expectedOutput = 'No space for more vehicles';
+        let expectedOutput = 'Sorry, parking lot is full';
         let actualOutput = await park(123);
         expect(actualOutput).toEqual(expectedOutput);
     });

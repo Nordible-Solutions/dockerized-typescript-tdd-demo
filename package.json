@@ -2,9 +2,9 @@
   "name": "solution",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/app.js",
+  "main": "dist/index.js",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpileOnly ./src/index.ts",
+    "dev": "tsc && ts-node-dev --respawn --transpileOnly ./src/index.ts",
     "start": "tsc && node dist/index.js",
     "test": "jest",
     "coverage": "jest --coverage"

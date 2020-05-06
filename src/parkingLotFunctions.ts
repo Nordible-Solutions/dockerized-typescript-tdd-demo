@@ -90,7 +90,7 @@ export const commandParser = async (input: string) => {
         let inputSplit = input.split(" ");
         let result;
 
-        switch (inputSplit[0]) {
+        switch (inputSplit[0].trim()) {
             case ('leave'):
                 result = await leave(inputSplit[1], parseInt(inputSplit[2]));
                 break;

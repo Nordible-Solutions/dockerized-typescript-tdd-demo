@@ -1,4 +1,5 @@
 # A. Project overview
+
 This project uses the following tech stack to implement the solution of the problem statement mentioned in **section C**
 
 - `Node.js`
@@ -9,10 +10,10 @@ This project uses the following tech stack to implement the solution of the prob
 # B. How to test this project?
 
 **To install all dependencies, run tests and generate coverage report:**
-$ bash bin/setup.sh
+`$ bash bin/setup.sh`
 
 **To run the code so it accepts input from a file:**
-$ bash bin/parking_lot.sh ~/usr/abc/input.txt
+`$ bash bin/parking_lot.sh ~/usr/abc/input.txt`
 
 # C. Problem statement
 
@@ -33,3 +34,12 @@ hour.
 We interact with the system via a simple set of commands which produce a specific
 output. Please take a look at the example below, which includes all the commands you need to support - they're self explanatory. The system should accept a filename
 as a parameter at the command prompt and read the commands from that file.
+
+# D. Development and code inspection
+
+Refer to `package.json` file for knowing where to look for core of the sourcecode:
+
+- Run `npm run dev` to develop changes on the fly and see them getting updated without restarting the project
+- Run `npm start` to start the project
+- Run `npm test` to run the tests
+- Run `npm run coverage` to generate the test coverage report

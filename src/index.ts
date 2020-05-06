@@ -1,20 +1,23 @@
 import { commandParser } from "./parkingLotFunctions";
+import * as fs from 'fs';
 
-commandParser('create_parking_lot 6');
-commandParser('park KA-01-HH-1234');
-commandParser('park KA-01-HH-9999');
-commandParser('park KA-01-BB-0001');
-commandParser('park KA-01-HH-7777');
-commandParser('park KA-01-HH-2701');
-commandParser('park KA-01-HH-3141');
-commandParser('leave KA-01-HH-3141 4');
-commandParser('status');
-commandParser('park KA-01-P-333');
-commandParser('park DL-12-AA-9999');
-commandParser('leave KA-01-HH-1234 4');
-commandParser('leave KA-01-BB-0001 6');
-commandParser('leave DL-12-AA-9999 2');
-commandParser('park KA-09-HH-0987');
-commandParser('park CA-09-IO-1111');
-commandParser('park KA-09-HH-0123');
-commandParser('status');
+const main = async (path) => {
+
+    // Make sure we got a filename on the command line.
+    if (path.length < 3) {
+        console.log(`bash bin/parking_lot.sh Filename.txt`);
+
+    } else if (!fs.existsSync(path[2])) {
+        console.log('Invalid file path');
+    }
+    else {
+        fs.readFile(path[2], 'utf8', async (err, data) => {
+            let inputSplit = data.split("\n");
+            for (let i = 0; i < inputSplit.length; i++) {                
+                console.log(await commandParser(inputSplit[i]));
+            }
+        });
+    }
+}
+
+main(process.argv);

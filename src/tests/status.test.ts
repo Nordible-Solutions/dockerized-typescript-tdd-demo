@@ -9,11 +9,11 @@ describe('status function tests', () => {
     });
 
     it('should test initiated parking lot status', async () => {
-        let expectedOutput = [`Slot No. Registration No.`, `abc`, `123`];
+        let expectedOutput =  `abc`;
         await create_parking_lot(1);
         await park('abc');
         let actualOutput = await status();
-        expect(actualOutput).toContain(expectedOutput[0]);
+        expect(actualOutput).toContain(expectedOutput);
     });
 
 });

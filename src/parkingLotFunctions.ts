@@ -30,7 +30,7 @@ export const status = async () => {
         vehiclesToPark = vehiclesToPark.sort((a, b) => {
             return a.slot - b.slot
         });
-        
+
         let status = `Slot No. Registration No.`;
         for (let i = 0; i < vehiclesToPark.length; i++) {
             status += `\n${vehiclesToPark[i].slot}        ${vehiclesToPark[i].vehicleNumber} `;
@@ -109,9 +109,9 @@ export const commandParser = async (input: string) => {
                 result = 'Error in command input!';
         }
 
-        console.log(result);
+        return result;
 
     } catch (e) {
-        console.log(`Error ${e}`);
+        return `Error ${e}`;
     }
 }

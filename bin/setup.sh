@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # Install dependencies
-npm install  
+npm install
+
+npm install jest -g
 
 # Generate coverage report
 npm test

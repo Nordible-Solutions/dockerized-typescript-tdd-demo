@@ -1,4 +1,9 @@
-let vehiclesToPark = [];
+interface vehiclesToParkType {
+    slot: string,
+    vehicleNumber: string
+}
+
+let vehiclesToPark: vehiclesToParkType[] = [];
 let availableParkingSlots = [];
 let lotSize = 0;
 
@@ -16,6 +21,19 @@ export const create_parking_lot = async (howManyLots) => {
         availableParkingSlots.push(i);
     }
     return `Created parking lot with ${lotSize} slots`;
+}
+
+export const status = async () => {
+    if (!vehiclesToPark.length) {
+        return `Error, no parking slots`;
+    } else {
+        let status = `Slot No. Registration No.`;
+        for (let i = 0; i < vehiclesToPark.length; i++) {
+            status += `\n${vehiclesToPark[i].slot} ${vehiclesToPark[i].vehicleNumber} `;
+        }
+
+        return status;
+    }
 }
 
 export const park = async (vehicleNumber) => {
@@ -39,13 +57,18 @@ export const park = async (vehicleNumber) => {
 export const commandParser = async (input) => {
     try {
 
-        input = input.toLowerCase().split(" ");
+        input = input.split(" ");
         let result;
 
         switch (input[0]) {
             case ('create_parking_lot'):
 
                 result = await create_parking_lot(input[1]);
+                console.log(result);
+                break;
+            case ('status'):
+
+                result = await status();
                 console.log(result);
                 break;
             case ('park'):

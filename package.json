@@ -4,9 +4,10 @@
   "description": "",
   "main": "dist/app.js",
   "scripts": {
+    "dev": "ts-node-dev --respawn --transpileOnly ./src/index.ts",
     "start": "tsc && node dist/index.js",
     "test": "jest",
-    "coverage":"jest --coverage"
+    "coverage": "jest --coverage"
   },
   "directories": {
     "test": "test"
@@ -18,6 +19,7 @@
     "@types/node": "^13.13.4",
     "jest": "^26.0.1",
     "ts-jest": "^25.4.0",
+    "ts-node-dev": "^1.0.0-pre.44",
     "tslint": "^5.12.1",
     "typescript": "^3.8.3"
   },

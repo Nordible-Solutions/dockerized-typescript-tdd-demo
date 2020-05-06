@@ -29,7 +29,7 @@ export const status = async () => {
     } else {
         let status = `Slot No. Registration No.`;
         for (let i = 0; i < vehiclesToPark.length; i++) {
-            status += `\n${vehiclesToPark[i].slot} ${vehiclesToPark[i].vehicleNumber} `;
+            status += `\n${vehiclesToPark[i].slot}        ${vehiclesToPark[i].vehicleNumber} `;
         }
 
         return status;

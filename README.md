@@ -40,6 +40,13 @@ as a parameter at the command prompt and read the commands from that file.
 Refer to `package.json` file for knowing where to look for core of the sourcecode:
 
 - Run `npm run dev` to develop changes on the fly and see them getting updated without restarting the project
-- Run `npm start` to start the project
+- Run `npm start <FILENAME.txt>` to start the project
 - Run `npm test` to run the tests
 - Run `npm run coverage` to generate the test coverage report
+
+Note: `FILENAME.txt` needs to be in the format as per `bin/input.txt`
+
+# E. Environment
+
+- `node v12.16.1`
+- `npm 6.13.4`

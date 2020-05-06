@@ -12,7 +12,7 @@
   "directories": {
     "test": "test"
   },
-  "author": "",
+  "author": "Zameer Ansari (https://blog.nordible.com/)",
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^25.2.1",
@@ -22,8 +22,5 @@
     "ts-node-dev": "^1.0.0-pre.44",
     "tslint": "^5.12.1",
     "typescript": "^3.8.3"
-  },
-  "dependencies": {
-    "express": "^4.16.4"
   }
 }

@@ -5,7 +5,7 @@ const main = async (path) => {
 
     // Make sure we got a filename on the command line.
     if (path.length < 3) {
-        console.log(`bash bin/parking_lot.sh Filename.txt`);
+        console.log(`You need to pass the input text file path`);
 
     } else if (!fs.existsSync(path[2])) {
         console.log('Invalid file path');

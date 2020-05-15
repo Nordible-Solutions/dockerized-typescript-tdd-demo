@@ -9,10 +9,3 @@ WORKDIR /app
 
 # Copy the source code to the working directory
 COPY . /app
-
-# Install npm dependencies
-RUN npm install
-
-ENTRYPOINT [ "/bin/setup.sh", "/bin/parking_lot.sh"]
-
-# CMD [ "/bin/setup.sh", "/bin/parking_lot.sh"]

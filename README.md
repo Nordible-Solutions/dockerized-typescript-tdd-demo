@@ -10,10 +10,20 @@ This project uses the following tech stack to implement the solution of the prob
 # B. How to test this project?
 
 **To install all dependencies, run tests and generate coverage report:**
-`$ bash bin/setup.sh`
+`sh bin/setup` or `bash bin/setup`
 
 **To run the code so it accepts input from a file:**
-`$ bash bin/parking_lot.sh ~/usr/abc/input.txt`
+`sh bin/parking_lot ~/usr/abc/input.txt` or `bash bin/parking_lot ~/usr/abc/input.txt`
+
+**To run the code from docker container:**
+
+First build the docker image: `docker build -t parking_lot:latest .`
+
+Enter the image's shell: `docker run -it parking_lot:latest`
+
+Now to do project setup, run `sh bin/setup` in the image's shell.
+
+Now to run the project with input file, run `sh bin/parking_lot bin/input.txt` in the image's shell.
 
 # C. Problem statement
 

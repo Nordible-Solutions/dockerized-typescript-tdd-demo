@@ -36,8 +36,10 @@ output. Please take a look at the example below, which includes all the commands
 as a parameter at the command prompt and read the commands from that file.
 
 Example: File 
-To install all dependencies, compile and run tests: $ bin/setup 
- To run the code so it accepts input from a file: $ bin/parking_lot file_inputs.txt 
+
+To install all dependencies, compile and run tests: $ bin/setup
+
+To run the code so it accepts input from a file: $ bin/parking_lot file_inputs.txt 
  
 Commands 
  

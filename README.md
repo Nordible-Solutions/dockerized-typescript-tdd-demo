@@ -35,6 +35,21 @@ We interact with the system via a simple set of commands which produce a specifi
 output. Please take a look at the example below, which includes all the commands you need to support - they're self explanatory. The system should accept a filename
 as a parameter at the command prompt and read the commands from that file.
 
+Example: File 
+To install all dependencies, compile and run tests: $ bin/setup 
+ To run the code so it accepts input from a file: $ bin/parking_lot file_inputs.txt 
+ 
+Commands 
+ 
+• Create parking lot of size n : `create_parking_lot {capacity}` 
+• Park a car : `park {car_number}`
+• Remove(Unpark) car from : `leave {car_number} {hours}` 
+• Print status of parking slot : `status`
+
+Input - refer to `bin/input.txt`
+ 
+Output - refer to `bin/outpur.txt` 
+ 
 # D. Development and code inspection
 
 Refer to `package.json` file for knowing where to look for core of the sourcecode:

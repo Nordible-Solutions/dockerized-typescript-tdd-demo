@@ -1,5 +1,7 @@
 # A. Project overview
 
+This project is a demo of dockerized Typescript implementation inspired by Test driven development approach.
+
 This project uses the following tech stack to implement the solution of the problem statement mentioned in **section C**
 
 - `Node.js`

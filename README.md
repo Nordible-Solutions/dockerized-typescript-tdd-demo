@@ -42,8 +42,11 @@ To install all dependencies, compile and run tests: $ bin/setup
 Commands 
  
 • Create parking lot of size n : `create_parking_lot {capacity}` 
+
 • Park a car : `park {car_number}`
+
 • Remove(Unpark) car from : `leave {car_number} {hours}` 
+
 • Print status of parking slot : `status`
 
 Input - refer to `bin/input.txt`
